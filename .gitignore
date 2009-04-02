@@ -1,2 +1,3 @@
 config/deploy.rb
 config/database.yml
+db/development.sqlite3
