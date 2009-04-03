@@ -2,18 +2,10 @@ class SongsController < ApplicationController
   # GET /songs
   def index
     @songs = Song.find(:all)
-
+    @song = Song.new
+    
     respond_to do |format|
       format.html # index.html.erb
-    end
-  end
-
-  # GET /songs/new
-  def new
-    @song = Song.new
-
-    respond_to do |format|
-      format.html # new.html.erb
     end
   end
 

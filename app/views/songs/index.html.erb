@@ -1,9 +1,16 @@
-<h1>Listing songs</h1>
+<div class="new-form">
+  <% form_for(@song) do |f| %>
+    <%= f.error_messages %>
+    <%= f.text_field :name %>
+    <p>
+      <%= f.submit "Create" %>
+    </p>
+  <% end %>
+</div>
+
+<p style="color: green"><%= flash[:notice] %></p>
 
 <table>
-  <tr>
-  </tr>
-
 <% for song in @songs %>
   <tr>
     <td><%= song.name %></td>
@@ -12,5 +19,3 @@
 </table>
 
 <br />
-
-<%= link_to 'New song', new_song_path %>
