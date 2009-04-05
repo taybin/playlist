@@ -1,4 +1,6 @@
-<div class="new-form">
+<%=link_to_function "add new song", visual_effect(:toggle_appear, "new-form", :duration => 0.5)%>
+
+<div id="new-form">
   <% form_for(@song) do |f| %>
     <%= f.error_messages %>
     <%= f.text_field :name %>
