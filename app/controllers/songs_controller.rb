@@ -23,4 +23,9 @@ class SongsController < ApplicationController
     end
   end
 
+protected
+ 
+  def authorize
+  end
+  
 end
