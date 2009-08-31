@@ -11,15 +11,9 @@ class SongsController < ApplicationController
 
   # POST /songs
   def create
-    @song = Song.new(params[:song])
-
     respond_to do |format|
-      if @song.save
-        flash[:notice] = 'Song was successfully created.'
-        format.html { redirect_to :action => "index" }
-      else
-        format.html { render :action => "new" }
-      end
+      flash[:notice] = 'New songs disabled.'
+      format.html { redirect_to :action => "index" }
     end
   end
 

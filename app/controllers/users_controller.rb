@@ -72,9 +72,9 @@ class UsersController < ApplicationController
 protected
 
   def authorize
-    unless User.find_by_id( session[:user_id] ) || User.count == 0
+    unless User.find_by_id( session[:user_id] ) || User.count.zero?
       session[:original_uri] = request.request_uri
-      flash[:notice] = "Please login 2"
+      flash[:notice] = "Please login"
       redirect_to :controller => 'admin', :action => 'login'
     end
   end
